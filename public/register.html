@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoginPage</title>
+	<link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100" rel="stylesheet">
+
+	<script type="text/javascript" src="javascripts/script.js"></script>
+
+</head>
+<body onload="hideSignup()">
+<div id="loginContainer">
+	<h2>Here is your login!!!</h2>
+		<form onsubmit="event.preventDefault()">
+			<h2><span id="loginError"></span></h2>
+			<input type="text" name="loginUsername" id="loginUsername" placeholder="Enter your username" onblur="this.placeholder = 'Enter your username'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<input type="password" name="loginPassword" id="loginPassword" placeholder="Enter your password" onblur="this.placeholder = 'Enter your password'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<button id="loginButton" onclick="return login()">Login</button>
+		</form>
+	<h2><a onclick="hideLogin()">I'm a new user</a></h2>
+</div>
+
+<div id="signupContainer">
+	<h2>Register yourself here!!!</h2>
+		<form onsubmit="event.preventDefault()">
+			<h2><span id="signupError"></span></h2>
+			<input type="email" name="signupEmail" id="signupEmail" placeholder="Enter your email-Id"  onblur="this.placeholder = 'Enter your email-Id'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<input type="text" name="signupUsername" id="signupUsername" placeholder="Enter your name" onblur="this.placeholder = 'Enter your name'" onfocus="this.placeholder = ''" autocomplete="off">
+			<input type="password" name="signupNewPassword" id="signupNewPassword" placeholder="Enter your password" onblur="this.placeholder = 'Enter your password'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<input type="password" name="signupConfirmPassword" id="signupConfirmPassword" placeholder="Confirm your password" onblur="this.placeholder = 'Confirm your password'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<input type="number" name="signupMobile" id="signupMobile" placeholder="Enter your mobile number"  onblur="this.placeholder = 'Enter your mobile number'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<h3 id="radioButtonsLabel">Do you have coupon code?</h3>
+			<button id="codeButton" onclick="getCouponCode()">Yes</button>
+			<button id="noCodeButton" onclick="noCode()">No</button>
+			<input type="text" name="signupCode" id="signupCode" placeholder="Enter your coupon code"  onblur="this.placeholder = 'Enter your coupon code'" onfocus="this.placeholder = ''" autocomplete="off"/>
+			<button id="signupButton" onclick="return signup()">Register</button>
+			</form>
+		<h2><a onclick="hideSignup()">Login</a></h2>
+</div>
+</body>
+</html>

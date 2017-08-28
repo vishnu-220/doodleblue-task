@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HomePage</title>
+  	<link href="stylesheets/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100" rel="stylesheet">
+	<script type="text/javascript" src="javascripts/script.js"></script>
+</head>
+
+<body onload="homeload()">
+	<div id="homePageContainer">
+	<button id="userLogoutBtn" onclick="logout()">Logout</button>
+	<h2 id="userWelcomeFont">Hi vishnu</h2>
+	<h3>You have <span id="points"></span> points.</h3>
+	<button id="userProfileContainerBtn" onclick="show()">Show profile</button>
+		<div id="userProfileContainer">
+  <form>
+  <div id="userProfileTableDiv">
+  <h2 id="tableCaption">Your Profile</h2>
+  <table id="userProfileTable">
+    <tr>
+      <td><font class="profileFont">Username&nbsp;&nbsp;&nbsp;</font></td>
+      <td><input type="text" class="profileInputs" id="profileName" readonly="readonly" value="xxxxx"/></td>
+    </tr>
+    <!-- <tr>
+      <td colspan="2" id="lineBreak"><hr></td>
+    </tr>  -->
+    <tr>
+      <td><font class="profileFont">Email-Id&nbsp;&nbsp;&nbsp;</font></td>
+      <td><input type="text" class="profileInputs" id="profileEmail" readonly="readonly" value="xxxx@yyy.com"/></td>
+    </tr> 
+   <!--  <tr>
+      <td colspan="2" id="lineBreak"><hr></td>
+    </tr>    -->
+    <tr>
+      <td><font class="profileFont">Password&nbsp;&nbsp;&nbsp;</font></td>
+      <td><input type="text" class="profileInputs" id="profilePassword" readonly="readonly" value="******"/></td>
+    </tr>
+    <!-- <tr>
+      <td colspan="2" id="lineBreak"><hr></td>
+    </tr>  -->
+    <tr>
+      <td><font class="profileFont" >Mobile&nbsp;&nbsp;&nbsp;</font></td>
+      <td><input type="text" class="profileInputs" id="profileMobile" readonly="readonly" value="xxxxxxxxxx"/></td>
+    </tr>
+  </table>
+  
+  </form>
+
+  <div id="profileBtns">
+  <button class="tableBtns" id="savebtn" onclick="return save()">SAVE</button>
+  <button class="tableBtns" id="editbtn" onclick="return edit()">EDIT</button>
+  <button class="tableBtns" id="closebtn" onclick="return off()" >CLOSE</button>
+  </div>
+  </div>
+  </div>
+</body>
