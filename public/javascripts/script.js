@@ -33,6 +33,10 @@
 		xhr.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				var text=JSON.parse(xhr.responseText);
+				document.getElementById("profileName").value=text.name;
+				document.getElementById("profileEmail").value=text.email;
+				document.getElementById("profilePassword").value=text.password;
+				document.getElementById("profileMobile").value=text.mobile;
 				// alert(text);
 				// document.getElementById("profileName").value=text.email;
 				// document.getElementById("profileEmail").value=text.email;
